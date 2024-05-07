@@ -20,7 +20,7 @@
     <header>
         <div class="container">
             <div class="header__wrap">
-                <a href="">
+                <a class="header__logo" href="">
                     <img src="assets/images/logo.svg" alt="Логотип">
                 </a>
                 <nav>
@@ -78,7 +78,7 @@
                     </a>
                 </div>
                 <div class="main__accordion">
-                    <img src="assets/images/fest_logo.svg" alt="">
+                    <img class="date_logo" src="assets/images/fest_logo.svg" alt="">
                     <div class="main__accordion__title">
                         О Фестивале
                     </div>
@@ -293,23 +293,30 @@
                                     <div class="swiper-slide"><img src="assets/images/image 1.png" alt=""></div>
                                     <div class="swiper-slide"><img src="assets/images/image 4.png" alt=""></div>
                                     <div class="swiper-slide"><img src="assets/images/image 3.png" alt=""></div>
+                                    <div class="swiper-slide"><img src="assets/images/image 3.png" alt=""></div>
                                 </div>
                                 <div class="swiper__btn">
-                                    <div class=" swiper-button-prev2 btn_left">
+                                    <div class=" swiper-button-prev2">
                                         <img src="assets/images/arrow_left.png" alt="">
                                     </div>
                                     <div class="swiper-pagination2"></div>
-                                    <div class=" swiper-button-next2 btn_right">
+                                    <div class=" swiper-button-next2">
                                         <img src="assets/images/arrow_right.png" alt="">
                                     </div>
                                 </div>
                             </div>
                             <script>
+                                const screenWidth = window.innerWidth;
+                                const baseFontSizeInPixels = screenWidth * (16 / 19.2 / 100);
+
+                                const spaceBetweenInRem = 7.375;
+                                const spaceBetweenInPixels = spaceBetweenInRem * baseFontSizeInPixels;
+
                                 const swiper = new Swiper('.swiper', {
                                     loop: true,
-                                    slidesPerView: 3,
-                                    slidesPerGroup: 3,
-                                    spaceBetween: 118,
+                                    slidesPerView: 2.5,
+                                    slidesPerGroup: 2,
+                                    spaceBetween: spaceBetweenInPixels,
                                     pagination: {
                                         el: '.swiper-pagination2',
                                     },
@@ -321,6 +328,129 @@
                             </script>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="studio">
+        <div class="container">
+            <div class="studio__wrap">
+                <div class="studio__main">
+                    <img class="studio__main__logo" src="assets/images/muzStudio-logo.png" alt="">
+                    <div class="studio__main__text">
+                        KEY STUDIO - студия, основанная музыкальным менеджером Агатой Русаковой и звукорежиссером
+                        и музыкальным продюсером Элен Зак. <br> <br>
+                        Студия находится в Москве и занимается вокальным продюсированием, продакшеном музыки, записью
+                        вокала, дикторов, подкастов, сведением звука для кино, роликов, а так же написанием саундтреков
+                        и сведением музыки.
+                    </div>
+                    <a class="studio__main__vk" href="https://vk.com/keysoundstudio">
+                        <svg viewBox="0 0 55 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M8.98065 9.48365C7.94865 10.5307 7.27065 12.0007 6.89265 14.7937C6.50565 17.6887 6.50265 21.5227 6.50265 27.0397V28.9596C6.50265 34.4676 6.50565 38.2986 6.89265 41.1906C7.26765 43.9866 7.94865 45.4656 8.98365 46.5216C10.0337 47.5506 11.5037 48.2316 14.2937 48.6066C17.1887 48.9936 21.0227 48.9996 26.5397 48.9996H28.4596C33.9676 48.9996 37.7987 48.9936 40.6937 48.6066C43.4867 48.2316 44.9656 47.5507 46.0216 46.5157C47.0506 45.4687 47.7316 43.9987 48.1066 41.2057C48.4966 38.3107 48.4996 34.4766 48.4996 28.9596V27.0397C48.4996 21.5317 48.4937 17.7007 48.1097 14.8087C47.7317 12.0127 47.0507 10.5337 46.0157 9.47765C44.9687 8.44865 43.4987 7.76765 40.7057 7.39265C37.8107 7.00565 33.9766 6.99965 28.4596 6.99965H26.5397C21.0317 6.99965 17.2007 7.00565 14.3087 7.39265C11.5127 7.76765 10.0367 8.44865 8.98065 9.48365ZM26.5397 0.99965H28.4596C32.7946 0.99965 37.1956 0.87065 41.5006 1.44665C44.9686 1.91165 47.9056 2.90465 50.2516 5.22665L50.2756 5.25365C52.5946 7.60565 53.5906 10.5426 54.0556 14.0136C54.6286 18.3126 54.4996 22.7107 54.4996 27.0397V28.9596C54.4996 33.2916 54.6316 37.6926 54.0526 42.0006C53.5906 45.4686 52.5946 48.4056 50.2726 50.7516L50.2456 50.7756C47.8966 53.0946 44.9597 54.0876 41.4857 54.5556C37.1867 55.1286 32.7886 54.9996 28.4596 54.9996H26.5397C22.2077 54.9996 17.8067 55.1286 13.5017 54.5526C10.0307 54.0876 7.09365 53.0946 4.75065 50.7726L4.72365 50.7456C2.40765 48.3936 1.41165 45.4567 0.94665 41.9857C0.37065 37.6897 0.49965 33.2916 0.49965 28.9596V27.0397C0.49965 22.7077 0.37065 18.3067 0.94965 13.9987C1.41165 10.5307 2.40765 7.59365 4.72965 5.24765L4.75365 5.22365C7.10565 2.90465 10.0426 1.91165 13.5136 1.44365C17.8156 0.87365 22.2137 0.99965 26.5397 0.99965ZM9.60765 17.4336C9.89565 31.4736 16.9157 39.8976 29.2277 39.8976H29.9476V31.8696C34.4657 32.3196 37.8857 35.6316 39.2537 39.8976H45.6437C44.9881 37.4736 43.8262 35.2161 42.2345 33.2738C40.6429 31.3316 38.6576 29.7487 36.4097 28.6297C38.4242 27.403 40.1642 25.7741 41.5207 23.8446C42.8773 21.9151 43.8212 19.7265 44.2936 17.4157H38.4977C37.2377 21.8797 33.4937 25.9296 29.9476 26.3076V17.4336H24.1337V32.9856C20.5337 32.0856 15.9977 27.7296 15.7997 17.4336H9.60765Z"
+                                fill="black" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <div class="project">
+                    <div class="project__title">
+                        Партнеры проекта
+                    </div>
+                    <div class="project__list">
+                        <div class="project__list__item">
+                            <img src="assets/images/item1.png" alt="">
+                            <div class="project__list__text">
+                                Фонд поддержки и развития музыкального <br>
+                                искусства “Культурная столица”
+                            </div>
+                        </div>
+                        <div class="project__list__item">
+                            <img src="assets/images/item2.png" alt="">
+                            <div class="project__list__text">
+                                Молодежный совет при Министерстве культуры РФ
+                            </div>
+                        </div>
+                        <div class="project__list__item">
+                            <img src="assets/images/item3.png" alt="">
+                            <div class="project__list__text">
+                                Студия звукозаписи «KINOMUSICA»
+                            </div>
+                        </div>
+                        <div class="project__list__item">
+                            <img src="assets/images/item4.png" alt="">
+                            <div class="project__list__text">
+                                Молодёжный парламент <br>
+                                города Москвы
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__list2">
+                        <div class="project__list__item">
+                            <img src="assets/images/item5.png" alt="">
+                            <div class="project__list__text">
+                                Росмоложёжь. Гранты
+                            </div>
+                        </div>
+                        <div class="project__list__item">
+                            <img src="assets/images/item6.png" alt="">
+                            <div class="project__list__text">
+                                Таврида.Арт
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts">
+                    <div class="contacts__title">
+                        Контакты
+                    </div>
+                    <div class="contacts__item">
+                        <div class="contacts__subtitle">
+                            Контактная информация:
+                        </div>
+                        <div class="contacts__email">
+                            E-mail: <a href="mailto:cultural-capital@mail.ru">cultural-capital@mail.ru</a>
+                        </div>
+                        <div class="contacts__tel">
+                            <a href="tel:+79162897905">+7 (916) 289-79-05</a>
+                        </div>
+                    </div>
+                    <div class="contacts__item">
+                        <div class="contacts__subtitle">
+                            Координатор образовательных программ:
+                        </div>
+                        <div class="contacts__name">
+                            Елизавета Александровна Прокошева
+                        </div>
+                        <div class="contacts__tel">
+                            +7 (950) 811-84-54
+                        </div>
+                        <div class="contacts__tel_desc">
+                            (только WhatsApp, Telegram)
+                        </div>
+                    </div>
+                    <div class="contacts__item">
+                        <div class="contacts__subtitle">
+                            Координатор концертных программ:
+                        </div>
+                        <div class="contacts__name">
+                            Екатерина Сергеевна Сидорова
+                        </div>
+                        <div class="contacts__tel">
+                            +7 (977) 937-39-66
+                        </div>
+                        <div class="contacts__tel_desc">
+                            (только WhatsApp, Telegram)
+                        </div>
+                    </div>
+                </div>
+                <div class="copy">
+                    © 2024
                 </div>
             </div>
         </div>

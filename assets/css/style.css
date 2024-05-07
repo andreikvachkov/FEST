@@ -24,9 +24,9 @@ body {
     background: #fff;
     position: relative;
 }
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1920px) {
     html {
-        font-size: calc(16vw / 14.4);
+        font-size: calc(16vw / 19.2);
     }
 }
 @media screen and (max-width: 768px) {
@@ -82,7 +82,7 @@ img {
 }
 
 .container {
-    max-width: 1140px;
+    max-width: 71.25rem;
     margin: 0 auto;
     height: 100%;
 }
@@ -90,15 +90,20 @@ img {
 /* header start */
 header {
     width: 100%;
-    height: 150px;
+    height: 9.375rem;
     box-shadow:
-        0 6px 15px 0 rgba(107, 39, 86, 0.1),
-        0 4px 4px 0 rgba(192, 73, 92, 0.2);
+        0 0.375rem 0.9375rem 0 rgba(107, 39, 86, 0.1),
+        0 0.25rem 0.25rem 0 rgba(192, 73, 92, 0.2);
     background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.85) 100%);
     position: absolute;
     z-index: 2;
     top: 0;
     left: 0;
+    padding: 0 0.9375rem;
+}
+.header__logo img {
+    width: 7.5rem;
+    height: auto;
 }
 header .container {
     max-width: 100%;
@@ -107,16 +112,23 @@ header .container {
     height: 100%;
     display: flex;
     align-items: center;
+    width: 100%;
+}
+.header__wrap nav {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-left: -7.5rem;
 }
 .header__wrap nav ul {
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 3.125rem;
 }
 .header__wrap nav a {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-transform: uppercase;
     text-align: center;
     color: #3d3d3d;
@@ -131,61 +143,68 @@ header .container {
     background-position: top;
 }
 .main__top {
-    max-width: 560px;
+    max-width: 35rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: 0 0 0 auto;
-    padding: 347px 0 216px 0;
+    padding: 21.6875rem 0 13.5rem 0;
+}
+.main__top img {
+    width: 35rem;
+    height: auto;
 }
 .main__top__text {
     font-family: var(--font-family);
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125rem;
     text-transform: uppercase;
     text-align: center;
     color: #1d1d1d;
     display: flex;
     flex-direction: column;
-    gap: 8px;
-    padding-top: 48px;
+    gap: 0.5rem;
+    padding-top: 3rem;
 }
 .main__top__text span {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 .main__top__date {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-transform: uppercase;
     text-align: center;
     color: #1d1d1d;
-    padding: 48px 0 24px 0;
+    padding: 3rem 0 1.5rem 0;
 }
 .main__top a {
     display: block;
-    padding: 12px 57px;
-    width: 367px;
+    padding: 0.75rem 3.5625rem;
+    width: 22.9375rem;
     background: #c0495c;
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 34px;
+    font-size: 2.125rem;
     text-align: center;
     color: #fff;
     margin: 0 auto;
 }
 .main__accordion {
-    max-width: 850px;
+    max-width: 53.125rem;
     margin: 0 0 0 auto;
-    padding: 68px 0;
+    padding: 4.25rem 0;
+}
+.main__accordion .date_logo {
+    width: 35rem;
 }
 .main__accordion__title {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 42px;
+    font-size: 2.625rem;
     text-transform: uppercase;
     color: #000;
-    padding: 42px 0;
+    padding: 2.625rem 0;
 }
 
 summary::-webkit-details-marker {
@@ -201,22 +220,22 @@ summary {
     display: inline-block;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 24px;
+    font-size: 1.5rem;
     text-transform: uppercase;
     color: #000;
     cursor: pointer;
     position: relative;
-    padding-right: 12px;
+    padding-right: 0.75rem;
     user-select: none;
 }
 summary:after {
     content: "";
     position: absolute;
     top: 50%;
-    right: -25px;
+    right: -1.5625rem;
     transform: translateY(-50%);
-    width: 25px;
-    height: 13px;
+    width: 1.5625rem;
+    height: 0.8125rem;
     background-image: url("../images/arrow_bottom.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -226,10 +245,10 @@ details[open] > summary:after {
     content: "";
     position: absolute;
     top: 50%;
-    right: -25px;
+    right: -1.5625rem;
     transform: translateY(-50%);
-    width: 25px;
-    height: 13px;
+    width: 1.5625rem;
+    height: 0.8125rem;
     background-image: url("../images/arrow_top.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -240,61 +259,62 @@ summary:focus {
 }
 details {
     display: block;
-    margin-bottom: 38px;
+    margin-bottom: 2.375rem;
 }
 details div {
-    padding-top: 18px;
+    padding-top: 1.125rem;
 }
 details p {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: justify;
     color: #000;
-    margin: 12px 0;
+    margin: 0.75rem 0;
 }
 details p span {
     text-decoration: underline;
 }
 details ul {
-    margin-left: 25px;
+    margin-left: 1.5625rem;
 }
 details ul li {
     list-style-type: disc;
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1rem;
     text-align: justify;
     color: #000;
 }
 .main__accordion__buttons {
     display: flex;
-    gap: 20px;
-    padding-top: 4px;
+    gap: 1.25rem;
+    padding-top: 0.25rem;
 }
 .main__button__download {
     display: block;
-    padding: 12px 0;
-    width: 368px;
+    padding: 0.75rem 0;
+    width: 23rem;
     background: #eb6b43;
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 34px;
+    font-size: 2.125rem;
     text-align: center;
     color: #fff;
 }
 .main__button__form {
     font-family: var(--font-family);
     font-weight: 700;
-    font-size: 34px;
+    font-size: 2.125rem;
     text-align: center;
     color: #fff;
-    padding: 12px 0;
-    width: 367px;
+    padding: 0.75rem 0;
+    width: 22.9375rem;
     background: #c0495c;
 }
 .swiper-slide {
     height: auto;
+    margin-right: 7.375rem;
 }
 .news__main .swiper-slide img {
     width: 100%;
@@ -307,8 +327,8 @@ details ul li {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 68px;
-    padding: 68px 0;
+    gap: 4.25rem;
+    padding: 4.25rem 0;
 }
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
@@ -318,7 +338,7 @@ details ul li {
 }
 .swiper-pagination-bullet {
     background: none;
-    border: 1px solid #1d1d1d;
+    border: 0.0625rem solid #1d1d1d;
     opacity: 1;
 }
 .swiper-pagination-bullet-active {
@@ -328,11 +348,168 @@ details ul li {
 .swiper-button-next2 {
     cursor: pointer;
 }
+.swiper-button-prev2 img,
+.swiper-button-next2 img {
+    width: 3.0625rem;
+    height: auto;
+}
 .news__title {
     font-family: var(--font-family);
     font-weight: 400;
-    font-size: 42px;
+    font-size: 2.625rem;
     text-transform: uppercase;
     color: #000;
-    padding: 68px 0 42px;
+    padding: 4.25rem 0 2.625rem;
+}
+/* main end */
+
+/* studio start */
+.studio {
+    background-image: url("../images/studio.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.studio__wrap {
+    padding-top: 15.625rem;
+}
+.studio__main {
+    background-image: url("../images/studio2.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 49.1875rem;
+    height: 51.125rem;
+    margin: 0 -1.25rem 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.studio__main__logo {
+    width: 12.5rem;
+    height: auto;
+}
+.studio__main__vk svg {
+    width: 3.4375rem;
+    height: auto;
+}
+.studio__main__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.125rem;
+    text-align: center;
+    color: #000;
+    max-width: 32.5rem;
+    padding: 1.5rem 0 2rem;
+}
+/* studio end */
+
+/* footer start */
+.footer {
+    background-image: url("../images/footer.png");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    margin-top: 4.25rem;
+}
+.project {
+    padding: 4.25rem 0;
+}
+.project__title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2.625rem;
+    text-transform: uppercase;
+    color: #000;
+}
+.project__list {
+    display: flex;
+    justify-content: space-between;
+    gap: 3rem;
+    padding-bottom: 1.5rem;
+    padding-top: 2.625rem;
+}
+.project__list2 {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+}
+.project__list__item {
+    max-width: 15.5625rem;
+    width: 100%;
+}
+.project__list__item img {
+    margin: 0 auto;
+    width: 8.1875rem;
+    height: auto;
+}
+.project__list__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.75rem;
+    text-align: center;
+    color: #000;
+    padding-top: 0.75rem;
+}
+.contacts {
+    padding: 4.25rem 0;
+}
+.contacts__title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 2.625rem;
+    text-transform: uppercase;
+    color: #000;
+    padding-bottom: 2.625rem;
+}
+.contacts__subtitle {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.125rem;
+    text-align: justify;
+    color: #000;
+    padding-bottom: 1.125rem;
+}
+.contacts__email {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000;
+    padding-bottom: 0.75rem;
+}
+.contacts__email a {
+    text-decoration: underline;
+}
+.contacts__tel {
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 1rem;
+    color: #000;
+}
+.contacts__tel_desc {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #555;
+    padding-top: 0.25rem;
+}
+.contacts__name {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1rem;
+    color: #000;
+    padding-bottom: 0.75rem;
+}
+.contacts__item:not(:last-child) {
+    padding-bottom: 2.125rem;
+}
+.copy {
+    border-top: 0.0625rem solid #555;
+    padding: 2.625rem 0rem;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 1.125rem;
+    text-align: right;
+    color: #000;
 }
