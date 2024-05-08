@@ -1,6 +1,5 @@
 <?php
-$to = "andrei.kvachkov@gmail.com"; // емайл получателя данных из формы
-$tema = "Форма обратной связи на PHP"; // тема полученного емайла
+$to = "cultural-capital@mail.ru"; // емайл получателя данных из формы
 $message = ""; // инициализация переменной $message
 
 // Проверяем, было ли отправлено имя
@@ -20,6 +19,8 @@ if(isset($_POST['telForm']) && !empty($_POST['telForm'])) {
 
 // Проверяем, была ли выбрана номинация
 if(isset($_POST['nominationForm']) && !empty($_POST['nominationForm'])) {
+    // Значение номинации будет использоваться как тема письма
+    $tema = "".$_POST['nominationForm'];
     $message .= "Номинация: ".$_POST['nominationForm']."<br>";
 }
 
