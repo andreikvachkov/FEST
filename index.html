@@ -57,6 +57,13 @@
                         </li>
                     </ul>
                 </nav>
+                <a class="mobile__burger" href="">
+                    <svg width="51" height="36" viewBox="0 0 51 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="9.5" y="10" width="32" height="4" fill="#1D1D1D" />
+                        <rect x="9.5" y="16" width="32" height="4" fill="#1D1D1D" />
+                        <rect x="9.5" y="22" width="32" height="4" fill="#1D1D1D" />
+                    </svg>
+                </a>
             </div>
         </div>
     </header>
@@ -73,7 +80,7 @@
                     <div class="main__top__date">
                         Москва, 2024 г.
                     </div>
-                    <a href="">
+                    <a href="" class="form__view">
                         Подать заявку
                     </a>
                 </div>
@@ -271,7 +278,7 @@
                         <a class="main__button__download" href="">
                             Скачать Положения
                         </a>
-                        <a class="main__button__form" href="">
+                        <a class="main__button__form form__view" href="">
                             Подать заявку
                         </a>
                     </div>
@@ -313,10 +320,11 @@
                                 const spaceBetweenInPixels = spaceBetweenInRem * baseFontSizeInPixels;
 
                                 const swiper = new Swiper('.swiper', {
+                                    slidesPerView: 1,
+                                    slidesPerGroup: 1,
+                                    spaceBetween: 0,
                                     loop: true,
-                                    slidesPerView: 2.5,
-                                    slidesPerGroup: 2,
-                                    spaceBetween: spaceBetweenInPixels,
+
                                     pagination: {
                                         el: '.swiper-pagination2',
                                     },
@@ -324,6 +332,13 @@
                                         nextEl: '.swiper-button-next2',
                                         prevEl: '.swiper-button-prev2',
                                     },
+                                    breakpoints: {
+                                        767: {
+                                            slidesPerView: 2.5,
+                                            slidesPerGroup: 2,
+                                            spaceBetween: spaceBetweenInPixels,
+                                        }
+                                    }
                                 });
                             </script>
                         </div>
@@ -337,6 +352,9 @@
             <div class="studio__wrap">
                 <div class="studio__main">
                     <img class="studio__main__logo" src="assets/images/muzStudio-logo.png" alt="">
+                    <div class="studio__main__title">
+                        Звукозаписывающая студия
+                    </div>
                     <div class="studio__main__text">
                         KEY STUDIO - студия, основанная музыкальным менеджером Агатой Русаковой и звукорежиссером
                         и музыкальным продюсером Элен Зак. <br> <br>
@@ -351,6 +369,7 @@
                                 fill="black" />
                         </svg>
                     </a>
+                    <img class="studio__main__bg" src="assets/images/studio.png" alt="">
                 </div>
             </div>
         </div>
@@ -455,6 +474,81 @@
             </div>
         </div>
     </section>
+    <div class="modalform">
+        <div class="modalformContent">
+            <div class="modalform_container-form">
+                <h5>Заявка</h5>
+                <form name="feedback" action="mail.php" method="post">
+                    <div class="modalform_container-formBody">
+                        <input class="nameForm" name="nameForm" type="text" placeholder="ФИО">
+                        <input class="emailForm" name="emailForm" type="text" placeholder="E-mail">
+                        <input class="telForm" name="telForm" type="text" placeholder="Телефон">
+                        <select class="nominationForm" name="nominationForm">
+                            <option value="">Выберите номинацию</option>
+                            <option value="Номинация №1">Произведение для симфонического оркестра</option>
+                            <option value="Номинация №2">Произведение для народного оркестра</option>
+                            <option value="Номинация №3">Камерная музыка</option>
+                            <option value="Номинация №4">Произведение для фортепиано</option>
+                            <option value="Номинация №5">Киномузыка</option>
+                            <option value="Номинация №6">Хоровая музыка</option>
+                            <option value="Номинация №7">Сборник для детей</option>
+                        </select>
+                        <input class="linkForm" name="linkForm" type="text" placeholder="Ссылка на облачное хранилище">
+                        <button type="submit">Отправить</button>
+                    </div>
+                </form>
+            </div>
+            <button id="modalform">
+                <svg width="44px" height="44px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                        <path
+                            d="M6.99486 7.00636C6.60433 7.39689 6.60433 8.03005 6.99486 8.42058L10.58 12.0057L6.99486 15.5909C6.60433 15.9814 6.60433 16.6146 6.99486 17.0051C7.38538 17.3956 8.01855 17.3956 8.40907 17.0051L11.9942 13.4199L15.5794 17.0051C15.9699 17.3956 16.6031 17.3956 16.9936 17.0051C17.3841 16.6146 17.3841 15.9814 16.9936 15.5909L13.4084 12.0057L16.9936 8.42059C17.3841 8.03007 17.3841 7.3969 16.9936 7.00638C16.603 6.61585 15.9699 6.61585 15.5794 7.00638L11.9942 10.5915L8.40907 7.00636C8.01855 6.61584 7.38538 6.61584 6.99486 7.00636Z"
+                            fill="#0F0F0F"></path>
+                    </g>
+                </svg>
+            </button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const modalForm = document.querySelector(".modalform");
+            const modalFormCloseBtn = document.querySelector("#modalform");
+            const modalFormBtns = document.querySelectorAll(".form__view");
+            function formClear() {
+                const nameField = document.querySelector(".nameForm");
+                const emailField = document.querySelector(".emailForm");
+                const telField = document.querySelector(".telForm");
+                const nominationField = document.querySelector(".nominationForm");
+                const linkField = document.querySelector(".linkForm");
+
+                nameField.value = "";
+                emailField.value = "";
+                telField.value = "";
+                nominationField.selectedIndex = 0;
+                linkField.value = "";
+            }
+
+            const changeStatusModalForm = (status) => {
+                status
+                    ? modalForm.classList.add("modalOpen")
+                    : modalForm.classList.remove("modalOpen");
+            };
+            modalFormCloseBtn.addEventListener("click", (e) => {
+                e.preventDefault();
+                formClear();
+                changeStatusModalForm(false);
+            });
+            modalFormBtns.forEach(btn => {
+                btn.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    changeStatusModalForm(true);
+                });
+            });
+        });
+
+    </script>
 </body>
 
 </html>
