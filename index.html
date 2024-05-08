@@ -57,7 +57,7 @@
                         </li>
                     </ul>
                 </nav>
-                <a class="mobile__burger" href="">
+                <a class="mobile__burger" href="" id="openMenu">
                     <svg width="51" height="36" viewBox="0 0 51 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="9.5" y="10" width="32" height="4" fill="#1D1D1D" />
                         <rect x="9.5" y="16" width="32" height="4" fill="#1D1D1D" />
@@ -548,6 +548,67 @@
             });
         });
 
+    </script>
+    <div class="mobile__menu">
+        <div class="mobile__menu__container">
+            <a class="menu__close" href="">
+                <svg width="51" height="32" viewBox="0 0 51 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.5 22H37.5L25.5 10L13.5 22Z" fill="white" />
+                </svg>
+            </a>
+            <ul>
+                <li>
+                    <a href="">
+                        Главная
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        О фестивале
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Новости
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Звукозаписывающая студия
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Партнеры проекта
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        Контакты
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const openMenuBtn = document.getElementById("openMenu");
+            const mobileMenu = document.querySelector(".mobile__menu");
+
+            openMenuBtn.addEventListener("click", (event) => {
+                event.preventDefault();
+                mobileMenu.style.top = "0";
+                openMenuBtn.classList.add("hidden");
+            });
+
+            const closeMenuBtn = document.querySelector(".menu__close");
+
+            closeMenuBtn.addEventListener("click", (event) => {
+                event.preventDefault();
+                mobileMenu.style.top = "-100%";
+                openMenuBtn.classList.remove("hidden");
+            });
+        });
     </script>
 </body>
 

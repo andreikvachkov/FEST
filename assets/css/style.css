@@ -31,7 +31,7 @@ body {
 }
 @media screen and (max-width: 768px) {
     html {
-        font-size: 16px;
+        font-size: calc(16vw / 3.75);
     }
 }
 input,
@@ -89,7 +89,7 @@ img {
 @media (max-width: 768px) {
     .container {
         max-width: 100%;
-        margin: 0 15px;
+        margin: 0 0.9375rem;
         height: 100%;
     }
 }
@@ -154,12 +154,12 @@ header .container {
         justify-content: space-between;
     }
     .header__logo img {
-        width: 80px;
+        width: 5rem;
         height: auto;
     }
     header {
         width: 100%;
-        height: 90px;
+        height: 5.625rem;
         padding: 0;
     }
 }
@@ -399,99 +399,99 @@ details ul li {
         background-position: top;
     }
     .main__top img {
-        width: 227px;
+        width: 14.1875rem;
         height: auto;
     }
     .main__top {
         max-width: 100%;
         width: 100%;
         align-items: center;
-        padding-top: 492px;
-        padding-bottom: 84px;
+        padding-top: 30.75rem;
+        padding-bottom: 5.25rem;
     }
     .main__top__text {
-        font-size: 12px;
-        gap: 0.5rem;
-        padding-top: 17px;
+        font-size: 0.75rem;
+        gap: 8px;
+        padding-top: 1.0625rem;
     }
     .main__top__text span {
-        font-size: 16px;
+        font-size: 1rem;
     }
     .main__top__text span:first-child {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
     .main__top__date {
-        font-size: 16px;
-        padding: 27px 0 24px 0;
+        font-size: 1rem;
+        padding: 1.6875rem 0 1.5rem 0;
     }
     .main__top a {
-        padding: 12px;
-        width: 226px;
-        font-size: 18px;
+        padding: 0.75rem;
+        width: 14.125rem;
+        font-size: 1.125rem;
         margin: 0 auto;
     }
     .main__accordion {
         max-width: 100%;
         width: 100%;
         margin: 0;
-        padding: 42px 0;
+        padding: 2.625rem 0;
     }
     .main__accordion .date_logo {
-        width: 227px;
+        width: 14.1875rem;
     }
     .main__accordion__title {
-        font-size: 24px;
-        padding: 34px 0;
+        font-size: 1.5rem;
+        padding: 2.125rem 0;
     }
     summary {
-        font-size: 18px;
-        padding-right: 12px;
+        font-size: 1.125rem;
+        padding-right: 0.75rem;
     }
     summary:after {
         content: "";
         position: absolute;
         top: 50%;
-        right: -1.5625rem;
+        right: -25px;
         transform: translateY(-50%);
-        width: 1.5rem;
-        height: 0.75rem;
+        width: 24px;
+        height: 12px;
         background-image: url(../images/arrow_bottom.png);
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
     }
     details p {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
     details ul li {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
     .main__accordion__buttons {
         display: flex;
         flex-direction: column;
-        gap: 34px;
-        padding-top: 0.25rem;
+        gap: 2.125rem;
+        padding-top: 4px;
         align-items: center;
     }
     .main__button__download {
-        padding: 12px 0;
-        width: 227px;
-        font-size: 18px;
+        padding: 0.75rem 0;
+        width: 14.1875rem;
+        font-size: 1.125rem;
     }
     .main__button__form {
-        padding: 12px 0;
-        width: 227px;
-        font-size: 18px;
+        padding: 0.75rem 0;
+        width: 14.1875rem;
+        font-size: 1.125rem;
     }
     .news__title {
-        font-size: 24px;
+        font-size: 1.5rem;
         text-transform: uppercase;
         color: #000;
-        padding: 84px 0 34px;
+        padding: 5.25rem 0 2.125rem;
     }
     .swiper__btn {
-        gap: 20px;
-        padding: 30px 0;
+        gap: 1.25rem;
+        padding: 1.875rem 0;
     }
 }
 /* main end */
@@ -555,7 +555,7 @@ details ul li {
         background-image: none;
     }
     .studio__wrap {
-        padding-top: 66px;
+        padding-top: 4.125rem;
     }
     .studio__main {
         background-image: none;
@@ -574,10 +574,10 @@ details ul li {
         display: block;
     }
     .studio__main__text {
-        font-size: 18px;
+        font-size: 1.125rem;
         text-align: left;
         max-width: 100%;
-        padding: 34px 0 18px;
+        padding: 2.125rem 0 1.125rem;
     }
     .studio__main__bg {
         display: block;
@@ -703,65 +703,65 @@ details ul li {
         margin-top: 0;
     }
     .project {
-        padding: 84px 0 0px;
+        padding: 5.25rem 0 0rem;
     }
     .project__title {
-        font-size: 24px;
+        font-size: 1.5rem;
     }
     .project__list,
     .project__list2 {
         display: flex;
         flex-direction: column;
-        padding-bottom: 24px;
-        gap: 24px;
-        padding-top: 42px;
+        padding-bottom: 1.5rem;
+        gap: 1.5rem;
+        padding-top: 2.625rem;
     }
     .project__list__item {
         max-width: 100%;
         width: 100%;
         display: flex;
         align-items: center;
-        gap: 12px;
+        gap: 0.75rem;
     }
     .project__list__item img {
         margin: 0;
-        width: 130px;
+        width: 8.125rem;
         height: auto;
     }
     .project__list__text {
         width: 100%;
-        font-size: 12px;
+        font-size: 0.75rem;
         text-align: center;
         padding-top: 0;
     }
     .contacts {
-        padding: 42px 0;
+        padding: 2.625rem 0;
     }
     .contacts__title {
-        font-size: 24px;
-        padding-bottom: 42px;
+        font-size: 1.5rem;
+        padding-bottom: 2.625rem;
     }
     .contacts__subtitle {
-        font-size: 18px;
+        font-size: 1.125rem;
         text-align: left;
-        padding-bottom: 18px;
+        padding-bottom: 1.125rem;
     }
     .contacts__email {
-        font-size: 16px;
-        padding-bottom: 12px;
+        font-size: 1rem;
+        padding-bottom: 0.75rem;
     }
     .contacts__tel {
-        font-size: 16px;
+        font-size: 1rem;
     }
-    .contacts__item:not(:last-child){
-        padding-bottom: 16px;
-        border-bottom: 1px solid #555;
+    .contacts__item:not(:last-child) {
+        padding-bottom: 1rem;
+        border-bottom: 0.0625rem solid #555;
     }
-    .contacts__item:not(:first-child){
-        padding-top: 16px;
+    .contacts__item:not(:first-child) {
+        padding-top: 1rem;
     }
     .copy {
-        font-size: 18px;
+        font-size: 1.125rem;
     }
 }
 .modalform {
@@ -881,4 +881,47 @@ details ul li {
     color: #1d1d1d;
     padding: 8px;
     width: 100%;
+}
+
+.mobile__menu {
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 4;
+    transition: top 0.3s ease;
+}
+.mobile__menu__container {
+    margin: 30px 15px;
+}
+.menu__close {
+    display: flex;
+    margin: 0 0 0 auto;
+    justify-content: end;
+}
+.mobile__menu__container ul {
+    width: 100%;
+    padding-top: 31px;
+}
+.mobile__menu__container ul a {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    display: block;
+}
+.mobile__menu__container ul li {
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.mobile__menu__container ul li:not(:last-child) {
+    margin-bottom: 18px;
+}
+.hidden {
+    display: none;
 }
