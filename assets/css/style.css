@@ -862,6 +862,12 @@ details ul li {
     background: none;
     border: none;
 }
+#feedbackMessage {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    color: #1d1d1d;
+}
 @media (max-width: 768px) {
     .modalformContent {
         padding: 30px 0;

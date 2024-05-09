@@ -1,7 +1,7 @@
 <?php
 $to = "cultural-capital@mail.ru"; // емайл получателя данных из формы
 $message = ""; // инициализация переменной $message
-
+$tema = "";
 // Проверяем, было ли отправлено имя
 if(isset($_POST['nameForm']) && !empty($_POST['nameForm'])) {
     $message .= "ФИО: ".$_POST['nameForm']."<br>";
@@ -33,7 +33,7 @@ $headers  = 'MIME-Version: 1.0' . "\r\n"; // заголовок соответс
 $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n"; // указывает на тип посылаемого контента
 
 // Добавляем пользовательский заголовок "From:"
-$headers .= 'From: andrei.kva4kov@yandex.ru' . "\r\n";
+$headers .= 'From:' . "\r\n";
 
 // Пытаемся отправить письмо
 if(mail($to, $tema, $message, $headers)) {

@@ -478,7 +478,7 @@
         <div class="modalformContent">
             <div class="modalform_container-form">
                 <h5>Заявка</h5>
-                <form name="feedback" action="mail.php" method="post">
+                <form name="feedback" method="post" id="feedbackForm" onsubmit="submitForm(); return false;">
                     <div class="modalform_container-formBody">
                         <input class="nameForm" name="nameForm" type="text" placeholder="ФИО">
                         <input class="emailForm" name="emailForm" type="text" placeholder="E-mail">
@@ -495,6 +495,7 @@
                         </select>
                         <input class="linkForm" name="linkForm" type="text" placeholder="Ссылка на облачное хранилище">
                         <button type="submit">Отправить</button>
+                        <div id="feedbackMessage"></div>
                     </div>
                 </form>
             </div>
@@ -511,6 +512,37 @@
             </button>
         </div>
     </div>
+    <script>
+        function submitForm() {
+            var formData = new FormData(document.getElementById('feedbackForm'));
+            const nameField = document.querySelector(".nameForm");
+            const emailField = document.querySelector(".emailForm");
+            const telField = document.querySelector(".telForm");
+            const nominationField = document.querySelector(".nominationForm");
+            const linkField = document.querySelector(".linkForm");
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', 'mail.php', true);
+            xhr.onload = function () {
+                if (xhr.status === 200) {
+                    document.getElementById('feedbackMessage').innerHTML = xhr.responseText;
+                    nameField.value = "";
+                    emailField.value = "";
+                    telField.value = "";
+                    nominationField.selectedIndex = 0;
+                    linkField.value = "";
+                } else {
+                    document.getElementById('feedbackMessage').innerHTML = 'При отправке сообщения возникла ошибка. Пожалуйста, попробуйте позже.';
+                    nameField.value = "";
+                    emailField.value = "";
+                    telField.value = "";
+                    nominationField.selectedIndex = 0;
+                    linkField.value = "";
+                }
+            };
+            xhr.send(formData);
+            return false;
+        }
+    </script>
     <script>
         document.addEventListener("DOMContentLoaded", () => {
             const modalForm = document.querySelector(".modalform");
